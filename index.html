@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="utf-8">
@@ -19,9 +19,13 @@
     <link rel="stylesheet" href="assets/css/queries.css">
     <link rel="stylesheet" href="assets/css/etline-font.css">
     <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/dialog.css">
+    <link rel="stylesheet" href="assets/css/dialog-wilma.css">
+    <link rel="stylesheet" href="assets/css/component.css">
     <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
 </head>
 
 <body id="top">
@@ -38,7 +42,7 @@
                                 <li class="menu__item menu__item--current"><a href="#top" class="menu__link">Home</a></li>
                                 <li class="menu__item"><a href="#us" class="menu__link">Us</a></li>
                                 <li class="menu__item"><a href="#references" class="menu__link">References</a></li>
-                                <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+                                <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -114,10 +118,10 @@
     <section class="blog text-center" id="references">
         <div class="container-fluid">
             <div class="button-group filter-button-group">
-                <button data-filter="*">*</button>
-                <button data-filter=".web">Web</button>
-                <button data-filter=".mobile">Mobile</button>
-                <button data-filter=".custom">Custom</button>
+                <button data-filter="*" class="filter-button">*</button>
+                <button data-filter=".web" class="filter-button">Web</button>
+                <button data-filter=".mobile" class="filter-button">Mobile</button>
+                <button data-filter=".custom" class="filter-button">Custom</button>
             </div>
             <div class="row grid" id="theGrid">
                 <div class="col-md-4 grid-item web">
@@ -180,7 +184,7 @@
                 <span class="category category--full">Nutrition</span>
                 <h2 class="title title--full">What Goes Around Comes Around</h2>
                 <div class="meta meta--full">
-                    <img class="meta__avatar" src="img/authors/3.png" alt="author03" />
+                    <img class="meta__avatar" src="img/blog-img-02.jpg" alt="author03" />
                 </div>
                 <p>Excerpts from <a href="http://www.gutenberg.org/ebooks/41214">Totem and Taboo</a> by Sigmund Freud.</p>
             </article>
@@ -188,7 +192,7 @@
                 <span class="category category--full">Tetrapak</span>
                 <h2 class="title title--full">What Goes Around Comes Around</h2>
                 <div class="meta meta--full">
-                    <img class="meta__avatar" src="img/authors/3.png" alt="author03" />
+                    <img class="meta__avatar" src="img/blog-img-02.jpg" alt="author03" />
                 </div>
                 <p>Excerpts from <a href="http://www.gutenberg.org/ebooks/41214">Totem and Taboo</a> by Sigmund Freud.</p>
             </article>
@@ -196,7 +200,7 @@
                 <span class="category category--full">Deneme</span>
                 <h2 class="title title--full">What Goes Around Comes Around</h2>
                 <div class="meta meta--full">
-                    <img class="meta__avatar" src="img/authors/3.png" alt="author03" />
+                    <img class="meta__avatar" src="img/blog-img-02.jpg" alt="author03" />
                 </div>
                 <p>Excerpts from <a href="http://www.gutenberg.org/ebooks/41214">Totem and Taboo</a> by Sigmund Freud.</p>
             </article>
@@ -204,6 +208,71 @@
         <button class="close-button"><i class="fa fa-close"></i><span>Close</span></button>
     </section>
 
+    <section class="sign-up section-padding text-center" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3>Get started with Sedna, absolutely free</h3>
+                    <p>Grab your copy today, exclusively from Codrops</p>
+                    <button data-dialog="contact-dialog" class="trigger">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div id="contact-dialog" class="dialog sign-up section-padding">
+        <div class="dialog__overlay"></div>
+        <div class="dialog__content">
+            <div class="morph-shape">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 560 280" preserveAspectRatio="none">
+                    <rect x="3" y="3" fill="none" width="556" height="276" />
+                </svg>
+            </div>
+            <div class="dialog-inner">
+                <form class="signup-form" action="#" method="POST" role="form">
+                    <div class="form-input-group">
+                        <i class="fa fa-envelope"></i>
+                        <input type="text" class="" placeholder="Enter your email" required="">
+                    </div>
+                    <div class="form-input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="text" class="" placeholder="Enter your full name" required="">
+                    </div>
+                    <div class="form-input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="text" class="" placeholder="Enter your reason" required="">
+                    </div>
+                    <div class="form-input-group">
+                        <i class="fa fa-lock"></i>
+                        <textarea type="text" class="" placeholder="Enter your message" required="" style="line-height: 3em;"></textarea>
+                    </div>
+                    <button class="action" data-dialog-close>Kapat</button>
+                    <div class="progress-button elastic">
+                        <button><span>Submit</span></button>
+                        <svg class="progress-circle" width="70" height="70">
+                            <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"
+                            />
+                        </svg>
+                        <svg class="checkmark" width="70" height="70">
+                            <path d="m31.5,46.5l15.3,-23.2" />
+                            <path d="m31.5,46.5l-8.5,-7.1" />
+                        </svg>
+                        <svg class="cross" width="70" height="70">
+                            <path d="m35,35l-9.3,-9.3" />
+                            <path d="m35,35l9.3,9.3" />
+                            <path d="m35,35l-9.3,9.3" />
+                            <path d="m35,35l9.3,-9.3" />
+                        </svg>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/snap.svg-min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
@@ -212,12 +281,14 @@
     <script src="assets/plugins/retina.js/retina.js"></script>
     <script src="assets/js/jquery.fancybox.pack.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
     <script src="assets/js/jquery.flexslider-min.js"></script>
     <script src="assets/plugins/classie/classie.js"></script>
     <script src="assets/plugins/jquery-waypoints/jquery.waypoints.min.js"></script>
     <script src="assets/js/classie.js"></script>
     <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/uiProgressButton.js"></script>
+    <script src="assets/js/dialogFx.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 
