@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'codropsicons';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/codropsicons/codropsicons.eot');
+    src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+body {
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #444;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a {
+    text-decoration: none;
+    color: #4e3c3e;
+    outline: none;
+}
+a:hover,
+a:focus {
+    color: #f48b95;
+}
+.section {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.section:nth-of-type(odd):not(:first-child) {
+    color: #fff;
+    background: #2a282b;
+}
+.section--menu {
+    position: relative;
+    overflow: hidden;
+    min-height: 30vh;
+    padding: 2em 0;
+}
+.section__title {
+    font-size: 1.65em;
+    font-weight: 700;
+    -webkit-flex: none;
+    flex: none;
+    margin: 1.5em 0 2em;
+    text-indent: 3px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #444;
+}
+.menu {
+    line-height: 1;
+    margin: 0 auto 3em;
+}
+.menu__list {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu__item {
+    display: block;
+    margin: 1em 0;
+}
+.menu__link {
+    font-size: 1.05em;
+    font-weight: bold;
+    display: block;
+    padding: 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.menu__link:hover,
+.menu__link:focus {
+    outline: none;
+}
+@media screen and (max-width:55em) {
+    .menu__list {
+        display: block;
+        margin: 0 auto;
+    }
+}
