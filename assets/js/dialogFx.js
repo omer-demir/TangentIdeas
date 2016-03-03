@@ -59,7 +59,7 @@
 		var self = this;
 
 		// close action
-		this.ctrlClose.addEventListener( 'click', this.toggle.bind(this) );
+		// this.ctrlClose.addEventListener( 'click', this.toggle.bind(this) );
 
 		// esc key closes dialog
 		document.addEventListener( 'keydown', function( ev ) {
@@ -83,12 +83,18 @@
 			} );
 
             $('.grid__item').css("z-index",10);
+            $('.navigation ').css("z-index",999);
+            $('.features-extra ').css("z-index",3);
+            
+            
 			// callback on close
 			this.options.onCloseDialog( this );
 		}
 		else {
 			classie.add( this.el, 'dialog--open' );
             $('.grid__item').css("z-index",0);
+            $('.navigation ').css("z-index",0);
+            $('.features-extra ').css("z-index",0);
             
 			// callback on open
 			this.options.onOpenDialog( this );
