@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\Deploys\TangentIdeasWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="apple-touch-icon.png">
+      <publishTime>03/03/2016 14:28:41</publishTime>
+    </File>
+    <File Include="bin/Nancy.dll">
+      <publishTime>03/03/2016 14:24:50</publishTime>
+    </File>
+    <File Include="bin/Nancy.Hosting.Aspnet.dll">
+      <publishTime>03/03/2016 14:24:28</publishTime>
+    </File>
+    <File Include="bin/Nancy.ViewEngines.Razor.dll">
+      <publishTime>03/03/2016 14:24:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/03/2016 14:24:58</publishTime>
+    </File>
+    <File Include="bin/TangentIdeas.Web.dll">
+      <publishTime>03/04/2016 17:07:59</publishTime>
+    </File>
+    <File Include="Content/assets/css/.DS_Store">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/bootstrap.min.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/component.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/default.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/dialog-wilma.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/dialog.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/etline-font.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/flexslider.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/ie.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/jquery.fancybox.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/menu.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/normalize.min.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/print.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/queries.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/style1.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/style1.css.map">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/styles.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/svg/down-arrow-filled-circular-button.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/svg/mechanical-gears-.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/css/svg/play-button.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/.DS_Store">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/codropsicons/codropsicons.eot">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/codropsicons/codropsicons.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/codropsicons/codropsicons.ttf">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/codropsicons/codropsicons.woff">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/codropsicons/license.txt">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/.DS_Store">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/et-line.dev.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/fonts/.DS_Store">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/fonts/et-line.eot">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/fonts/et-line.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/fonts/et-line.ttf">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/fonts/et-line.woff">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/index.html">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/lte-ie7.js">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/Read Me.txt">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line-font/style.css">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line.eot">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line.ttf">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/et-line.woff">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/flexslider-icon.eot">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/flexslider-icon.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/flexslider-icon.ttf">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/flexslider-icon.woff">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/fontawesome-webfont.eot">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/fontawesome-webfont.svg">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/fontawesome-webfont.woff">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/fontawesome-webfont.woff2">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/FontAwesome.otf">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/.DS_Store">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/classie.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/clipboard.min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/dialogFx.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/jquery.fancybox.pack.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/jquery.flexslider-min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/min/.DS_Store">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/min/scripts-min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/modernizr.custom.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/scripts.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/snap.svg-min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/uiProgressButton.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/vendor/.DS_Store">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/vendor/bootstrap.min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/vendor/jquery-1.11.2.min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/vendor/npm.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/animate.css/animate-config.json">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/animate.css/animate.min.css">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/classie/classie.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-waypoints/jquery.waypoints.min.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/retina.js/retina.js">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/.DS_Store">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/ie.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/partials/_buttons.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/partials/_colors.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/partials/_layout.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/partials/_typography.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/print.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/style1.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/style2.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/styles.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/_base.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/assets/sass/_mediaqueries.scss">
+      <publishTime>03/03/2016 14:27:35</publishTime>
+    </File>
+    <File Include="Content/img/bg_play_pause.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/blank.gif">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/blog-img-01.jpg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/blog-img-02.jpg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/blog-img-03.jpg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/fancybox_loading%402x.gif">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/fancybox_loading.gif">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/fancybox_overlay.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/fancybox_sprite%402x.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/fancybox_sprite.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/hero-min.jpg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/hero.jpg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/logo-2.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/macbook-pro%402x.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/macbook-pro.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/polygonal-bg.jpg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/puff.svg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/sedna-logo%402x.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/sedna-logo.png">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/img/testimonials-bg.jpg">
+      <publishTime>03/03/2016 14:27:34</publishTime>
+    </File>
+    <File Include="Content/nancy-logo.png">
+      <publishTime>03/03/2016 14:23:18</publishTime>
+    </File>
+    <File Include="favicon-16x16.png">
+      <publishTime>03/03/2016 14:28:41</publishTime>
+    </File>
+    <File Include="favicon-32x32.png">
+      <publishTime>03/03/2016 14:28:41</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/03/2016 14:28:41</publishTime>
+    </File>
+    <File Include="icon.png">
+      <publishTime>03/03/2016 14:23:19</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/03/2016 14:24:59</publishTime>
+    </File>
+    <File Include="Views/index.cshtml">
+      <publishTime>03/04/2016 09:43:25</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/04/2016 17:07:59</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
