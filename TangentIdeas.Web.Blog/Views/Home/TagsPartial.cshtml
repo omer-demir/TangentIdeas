@@ -1,0 +1,7 @@
+﻿@model List<string>
+<h4 class="subtitle">Tagler</h4>
+<div class="tagcloud">
+    @foreach(var item in Model) {
+        <a href="@Url.Action("FilteredBlogPosts",new { tagName=item })">@item</a>
+    }  
+</div>

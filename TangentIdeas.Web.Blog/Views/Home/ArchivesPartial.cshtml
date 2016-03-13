@@ -1,0 +1,11 @@
+﻿@using TangentIdeas.Web.Blog.Helpers
+@model List<TangentIdeas.Web.Data.UIModel.ArchiveUIModel>
+<h4 class="subtitle">Arşiv</h4>
+<div class="listbox1">
+    <ul>
+        @foreach(var item in Model) {
+            <li><a href="@Url.Action("FilteredBlogPosts",new { currentYear = item.Year.ToString(),currentMonth = item.Month.ToString() })">@Html.MonthWithString(item.Month) @item.Year (@item.Count)</a></li>
+        }
+    </ul>
+</div>
+<!-- end-listbox1 -->

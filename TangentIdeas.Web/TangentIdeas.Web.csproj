@@ -43,6 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\ExternalFiles\Dapper\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Rainbow">
+      <HintPath>..\ExternalFiles\Dapper.Rainbow\net45\Dapper.Rainbow.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>

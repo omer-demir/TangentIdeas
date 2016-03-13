@@ -1,0 +1,154 @@
+﻿@model TangentIdeas.Web.Data.UIModel.BlogPostUIModel
+
+<hr class="vertical-space2" />
+<section class="eleven columns">
+    <article class="blog-single-post">
+        <img src="@Url.Content(Model.ImageUrl)" alt="" /><br />
+        <div class="post">
+            <div class="postmetadata">
+                <h6 class="blog-author">@Model.ParsedCreateDate.ToShortDateString() / <strong>@Model.Author</strong> / <strong>@Model.Tags</strong></h6>
+            </div>
+            @Html.Raw(Model.Content)
+            <br class="clear" />
+            <!-- ==================== End Single Post  ==================== -->
+            @{
+                Html.RenderAction("SinglePostTagsPartial", Model.Id);
+            }
+
+            <div class="next-prev-posts">
+                <a href="#" class="prev-post"><i class="icomoon-arrow-left"></i> Previous Post</a>
+                <a href="#" class="next-post">Next Post <i class="icomoon-arrow-right-2"></i></a>
+            </div><!-- End next-prev post -->
+
+            <hr class="boldbx" />
+
+            <ul class="share-btns" style="display: inline-flex">
+                <li class="twitter">
+                    <a href="https://twitter.com/share" class="twitter-share-button" style="border: none !important;">Tweet</a>
+                    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+                </li>
+                <li class="facebook">
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) { return; }
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+                </li>
+            </ul>
+
+            <!-- END-SHARE -->
+        </div>
+    </article>
+    <hr class="vertical-space1">
+
+    <div class="commentbox">
+        <div id="dvComments">
+            @{Html.RenderAction("CommentsPartial", "Comment", new { cList = Model.Comments });}
+        </div>
+        <div id="respond">
+            <h5 id="reply-title"><strong>Yorum Yaz</strong> </h5>
+            <form action="" method="post" id="commentform" data-validate="parsley" onsubmit="return AddComment(this);">
+                <p class="comment-notes">E-posta hesabınız yayımlanmayacak. Gerekli alanlar <span class="required">*</span> ile işaretlenmiştir. </p>
+                <div class="one_third">
+                    <p class="comment-form-author">
+                        <label for="author">Ad</label>
+                        <span class="required">*</span>
+                        <input id="author" name="author" type="text" value="" size="30" required data-parsley-error-message="Adınızı Giriniz.">
+                    </p>
+                </div>
+                <div class="one_third">
+                    <p class="comment-form-email">
+                        <label for="email">Email <small>(E-posta yayımlanmayacak)</small></label>
+                        <span class="required">*</span>
+                        <input id="email" name="email" type="email" value="" size="30" required data-parsley-error-message="Email Adresinizi Giriniz.">
+                    </p>
+                </div>
+                <div class="one_third column-last">
+                    <p class="comment-form-url">
+                        <label for="url">Website</label>
+                        <input id="url" name="url" type="text" value="" size="30">
+                    </p>
+                </div>
+                <div class="eleven columns alpha">
+                    <p class="comment-form-comment">
+                        <label for="comment">Yorum</label>
+                        <textarea id="comment" name="comment" rows="8" required data-parsley-error-message="Yorum Giriniz."></textarea>
+                    </p>
+                </div>
+                <br class="clear">
+                <p class="form-allowed-tags">Şu <abbr title="HyperText Markup Language">HTML</abbr> etiketlerini ve özelliklerini kullanabilirsiniz : <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
+                <p class="form-submit">
+                    <input name="submit" type="submit" id="submit" value="Gönder" class="green small">
+                    <input type="hidden" name="comment_post_ID" value="@Model.Id" id="comment_post_ID">
+                </p>
+            </form>
+            <script>
+                AddComment = function (form) {
+                    //public string Name { get; set; }
+
+                    //public string Email { get; set; }
+                    //public string Website { get; set; }
+                    //public string CommentText { get; set; }
+                    var comment = {
+                        BlogPostId: form["comment_post_ID"].value,
+                        Name: form["author"].value,
+                        Email: form["email"].value,
+                        Website: form["url"].value,
+                        CommentText: form["comment"].value
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "/Comment/AddComment",
+                        data: { cuim: comment },
+                        datatype: "html",
+                        success: function (data) {
+                            if (data != "0")
+                            {
+                                $("#dvComments").html(data);
+                                //#dvComments li.comment:last-child liOpacity0
+                                $("#dvComments li.comment:last-child").addClass("liOpacity0").removeClass("liOpacity0").addClass("liOpacity1");
+                                ResetForm();
+                            }
+                            else { alert("Hata oluştu."); }
+                        }
+                    });
+                    return false;
+                };
+                ResetForm = function () {
+                    $("#email").val('');
+                    $("#author").val('');
+                    $("#url").val('');
+                    $("#comment").val('');
+                    
+                };
+            </script>
+        </div>
+        <!-- #respond -->
+    </div>
+    <!-- end-commentbox  -->
+
+</section>
+<!-- end-main-conten -->
+<aside class="four columns offset-by-one sidebar">
+    @{
+        Html.RenderAction("AboutUsPartial");
+    }
+    <br class="clear" />
+    @{
+        Html.RenderAction("ArchivesPartial");
+    }
+
+    <br class="clear" />
+    @{
+        Html.RenderAction("TagsPartial");
+    }
+</aside>
+<!-- end-sidebar-->
+<div class="white-space"></div>
+
+<script src="~/Scripts/parsley.min.js"></script>

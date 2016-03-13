@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MiniBlog.Data.Models.BlogPost>
+
+@{
+    ViewBag.Title = "ListBlogPosts";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .m-tb-10 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<h2>Blog Girdileri</h2>
+
+<a class="btn btn-danger m-tb-10 " href="@Url.Action("CreateBlogPost","Main")">Blog Kaydı Oluştur</a>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tags)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActiveStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tags)
+        </td>
+        <td>
+            @Html.Raw(item.ShortDescription)
+        </td>
+        <td>
+            <img src="@Url.Content(item.ImageUrl)" alt="" style="width: 100px;"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActiveStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit","EditBlogPost",new {  id=item.Id  }) |
+            @Html.ActionLink("Details","BlogPostDetail",new { id = item.Id }) |
+            @Html.ActionLink("Delete","DeleteBlogPost",new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -5,6 +5,16 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangentIdeas.Web", "TangentIdeas.Web\TangentIdeas.Web.csproj", "{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalFiles", "ExternalFiles", "{83769991-AB80-4E84-9EB0-B1391B31C69A}"
+	ProjectSection(SolutionItems) = preProject
+		ExternalFiles\Dapper\Dapper.dll = ExternalFiles\Dapper\Dapper.dll
+		ExternalFiles\Dapper.Rainbow\net45\Dapper.Rainbow.dll = ExternalFiles\Dapper.Rainbow\net45\Dapper.Rainbow.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangentIdeas.Web.Data", "Data\TangentIdeas.Web.Data\TangentIdeas.Web.Data.csproj", "{5D945958-D211-4802-9DCA-29793054961E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangentIdeas.Web.Blog", "TangentIdeas.Web.Blog\TangentIdeas.Web.Blog.csproj", "{C4E75FB8-3039-4F07-8351-D96AB2A5CD0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,14 @@ Global
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D945958-D211-4802-9DCA-29793054961E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D945958-D211-4802-9DCA-29793054961E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D945958-D211-4802-9DCA-29793054961E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D945958-D211-4802-9DCA-29793054961E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E75FB8-3039-4F07-8351-D96AB2A5CD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E75FB8-3039-4F07-8351-D96AB2A5CD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E75FB8-3039-4F07-8351-D96AB2A5CD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E75FB8-3039-4F07-8351-D96AB2A5CD0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

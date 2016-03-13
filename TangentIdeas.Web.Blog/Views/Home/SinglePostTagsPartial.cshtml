@@ -1,0 +1,7 @@
+﻿@model List<string>
+<div class="post-tags">
+    <i class="icomoon-tags"></i> : &nbsp;
+    @foreach(var item in Model) {
+        <a href="@Url.Action("FilteredBlogPosts",new { tagName=item })">@item </a>
+    }
+</div><!-- End Tags -->

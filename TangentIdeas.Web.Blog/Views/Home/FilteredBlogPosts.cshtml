@@ -1,0 +1,70 @@
+﻿@using System.Globalization
+@using TangentIdeas.Web.Blog.Helpers
+@model List<TangentIdeas.Web.Data.UIModel.BlogPostUIModel>
+
+<style>
+    #headline, #headline2 {
+        padding: 0;
+    }
+
+        #headline h3, #headline2 h3 {
+            font-size: 33px;
+            padding: 8px;
+            background-color: #ddd;
+        }
+</style>
+
+<section id="headline">
+    <div class="container">
+        @{
+            string filterText = "";
+            if(Request.Params["currentMonth"] != null && Request.Params["currentYear"] != null) {
+                filterText = Html.MonthWithString(int.Parse(Request.Params["currentMonth"])) + " " + Request.Params["currentYear"];
+            } else {
+                filterText = Request.Params["tagName"];
+            }
+        }
+        <h3>Filtreleme Sonuçları - @filterText</h3>
+    </div>
+</section>
+<hr class="vertical-space2" />
+<section class="twelve columns">
+    @foreach(var item in Model) {
+        <article class="blog-post">
+            <div class="one columns alpha">
+                <div class="blog-date-sec">
+                    <span>@Html.MonthWithString(item.ParsedCreateDate.Month)</span>
+                    <h3>@item.ParsedCreateDate.Day</h3>
+                    <span>@item.ParsedCreateDate.Year</span>
+                </div>
+            </div>
+            <div class="four columns alpha">
+                <img src="@Url.Content(item.ImageUrl)" alt="" /><br />
+            </div>
+            <div class="six columns omega">
+                <h3><a href="@Url.Action("BlogDetail",new { id = item.Id,friendlyEnd=item.Title.Replace(' ','-').ToLower(CultureInfo.InvariantCulture) })">@item.Title</a></h3>
+                <div class="postmetadata">
+                    <h6 class="blog-author"><strong>by</strong> @item.Author </h6>
+                    <h6 class="blog-cat"><strong>in</strong> @item.Tags </h6>
+                </div>
+                <p> @Html.Raw(item.ShortDescription)</p>
+                <a href="@Url.Action("BlogDetail",new { id = item.Id,friendlyEnd=item.Title.Replace(' ','-').ToLower(CultureInfo.InvariantCulture) })" class="readmore">Devamı...</a>
+            </div>
+            <br class="clear" />
+        </article>
+
+    }
+    <br class="clear" />
+    <div class="pagination2 pagination2-centered">
+        <ul>
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="vertical-space2"></div>
+</section>
+
