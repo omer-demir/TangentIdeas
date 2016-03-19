@@ -16,8 +16,9 @@ namespace TangentIdeas.Web {
         protected override byte[] FavIcon => _favicon ?? (this._favicon = LoadFavIcon());
 
         private byte[] LoadFavIcon() {
-            var favIcon = File.ReadAllBytes(HttpContext.Current.Server.MapPath("favicon.ico"));
-            return favIcon;
+            //var favIcon = File.ReadAllBytes(HttpContext.Current.Server.MapPath("favicon.ico"));
+            //return favIcon;
+            return null;
         }
     }
 }
